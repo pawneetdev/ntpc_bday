@@ -1,6 +1,11 @@
 <?php
+//phpinfo();
+//if(!@sqlsrv_connect('webserver', 'sa', 'sql@123') || !@sqlsrv_select_db('website'))
+//die(sqlsrv_error());
+//echo "not working";
 
-if(!@mysql_connect('localhost', 'root', '') || !@mysql_select_db('ntpc'))
-die(mysql_error());
-
+$server = 'webserver';
+$a = array("Database" => "website", "UID"=> "sa", "pwd" => "sql@123");
+$conn = sqlsrv_connect($server, $a);
+//echo "working";
 ?>
